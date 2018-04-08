@@ -1,0 +1,479 @@
+/*
+* @project: NYLART.io;
+* @author: https://github.com/nylart;
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+0. General
+1. Slider
+2. Navbar
+3. About 
+4. Skills 
+5. Portfolio 
+6. Footer
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[0. General ]
+-------------------------------------------------------------------*/
+body {
+    margin:0px;
+    font-size: 14px;
+    color: #333;
+    background-color:#fff;
+    letter-spacing: 1px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section .heading {
+    text-align:center;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.links {
+    font-size:11px;
+}
+
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:1000;
+}
+
+.loader .inner {
+    width: 100%;
+    height: 100%;
+    background: url(../images/icons/loader.gif) center center no-repeat;
+}
+
+
+/*------------------------------------------------------------------
+[1. Slider ]
+-------------------------------------------------------------------*/
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:3;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.slides-navigation  {
+    z-index:6;
+}
+
+.slides-navigation .prev,
+.slides-navigation .next,
+.skills-navigation .prev,
+.skills-navigation .next, {
+    width: 47px;
+    height: 47px;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.slides-navigation a.prev,
+.skills-navigation a.prev, {
+    left: 20px;
+    background-image: url('../images/icons/prev.png')
+}
+.slides-navigation a.next,
+.skills-navigation a.next, {
+    right: 20px;
+    background-image: url('../images/icons/next.png')
+}
+
+.titleMessage {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index:6;
+    text-align:center;
+    margin-top:-125px;
+    color: #fff;
+}
+
+.titleMessage .heading p {
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0,0,0, 0.4);
+    font-weight: 100;
+    letter-spacing: 7px;
+}
+
+.titleMessage .heading .main {
+    font-size: 50px;
+}
+
+.titleMessage .heading .sub {
+    font-size: 23px;
+}
+
+/*------------------------------------------------------------------
+[2. NavBar ]
+-------------------------------------------------------------------*/
+
+#navigation {
+    background-color: #4b6584;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li {
+    padding: 0 10px;
+}
+
+#navigation li a {
+    color: #fff;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background: url(../images/icons/menu.png);
+    background-size: 100%;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+}
+
+/*------------------------------------------------------------------
+[3. About ]
+-------------------------------------------------------------------*/
+.aboutImage {
+    margin-top:15%;
+    border-radius:50%
+}
+
+.aboutText {
+    font-size:13px;
+}
+
+.resumeButton {
+    color: #4b6584;
+    padding: 15px 20px;
+    display: inline-block;
+    
+    margin-top: 20px;
+    border: 1px solid #4b6584;
+    border-radius: 2px;
+}
+
+.resumeButton:hover {
+    text-decoration: none;
+    color:  #fff;
+    background-color: #4b6584;
+}
+
+/*------------------------------------------------------------------
+[4. Skills ]
+-------------------------------------------------------------------*/
+.skillsSection,
+.statsSection {
+    background-color: #4b6584;
+    color: #fff;
+}
+
+.skillsSection {
+    padding: 50px 0 0 0;
+    background-color: #4b6584;
+    color: #fff;
+}
+
+.statsSection {
+    padding: 50px 0 50px 0;
+    color: #fff;
+}
+
+.skills2Section {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #000000;
+}
+
+.skill {
+    text-align:center;
+    margin-left:10px;
+}
+.chart {
+    position:relative;
+    width: 152px;
+    height: 152px;
+    display: inline-block;
+    text-align: center;
+}
+
+.chart canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.chart .percent {
+    color: #fff;
+    line-height:152px;
+    display: inline-block;
+    font-size: 35px;
+
+}
+
+.chart .percent:after {
+    content: '%';
+}
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #d1d8e0;
+    border-top:none;
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after  {
+    content:'';
+    position:absolute;
+    top:0px;
+    width: 30%;
+    border-bottom: 2px solid #d1d8e0;
+}
+
+.squareInnerContainer:before {
+    right: 0px;
+}
+
+.squareInnerContainer:after {
+    left:0px;
+}
+
+.squareContent h2{
+    font-size: 56px;
+    margin-bottom:10px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.squareContent h3{
+    font-size: 13px;
+    font-weight: 600px;
+    margin: 0;
+    color: #d1d8e0;
+}
+
+.squareIcon {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40%;
+    height:60px;
+    font-size: 45px;
+    margin-left:-20%;
+    color: #fff;
+}
+
+.owl-prev {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 30%;
+    margin-left: -50px;
+    display: block!IMPORTANT;
+    border:0px solid black;
+    transform: scale(3);
+}
+
+.owl-next {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 30%;
+    right: -50px;
+    display: block!IMPORTANT;
+    border:0px solid black;
+    transform: scale(3);
+}
+
+.owl-next:focus, .owl-prev:focus {outline: none;}
+
+/*------------------------------------------------------------------
+[5. Portfolio]
+-------------------------------------------------------------------*/
+
+.filter a {
+    color:#bdc3c7;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    display: block;
+}
+
+.filter li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.filter .current {
+    background-color: #4b6584;
+    border-color: #4b6584;
+    color: #fff;
+}
+
+.filter {
+    text-align: center;
+    width:100%;
+}
+
+.itemsContainer {
+    width:100%;
+}
+
+.items li {
+    display:inline-block;
+    padding:5px;
+}
+
+.items li img {
+    width:100%;
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+}
+
+.items .item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.items .icons {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align:center;
+    z-index:3;
+}
+
+.items .icons i{
+    color: #fff;
+    font-size:20px;
+    margin-top:9px;
+}
+
+.items a{
+    width: 40px;
+    height: 40px;
+    background-color:  #4b6584;
+    position: relative;
+    display: inline-block;
+
+    -webkit-transition: all 0.2s linear, 0.2s;
+    -moz-transition: all 0.2s linear, 0.2s;
+    -o-transition: all 0.2s linear, 0.2s;
+    -ms-transition: all 0.2s linear, 0.2s;
+    -transition: all 0.2s linear, 0.2s;
+
+}
+
+.items .imageOverlay {
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left:0px;
+    top:0px;
+    opacity:0;
+
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+}
+
+.items .item:hover .imageOverlay {
+    opacity:1;
+}
+
+.items .openButton {
+    float: left;
+    left: -200px;
+}
+
+.items .projectLink {
+    float: right;
+    right: -200px;
+}
+
+.items .item:hover .openButton {
+    left:0px;
+}
+
+.items .item:hover .projectLink {
+    right: 0px;
+}
+
+.items .item:hover img {
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    -o-transform: scale(1.05,1.05);
+    -ms-transform: scale(1.05,1.05);
+    -transform: scale(1.05,1.05);
+}
+
+.items {
+    padding: 0;
+}
+
+/*------------------------------------------------------------------
+[6. Footer]
+-------------------------------------------------------------------*/
+
+.copyrightSection{
+    background-color:#363b3f;
+    color: #fff;
+    padding: 30px 5px;
+    font-size: 12px; 
+    text-align: center;
+}
+
+.copyrightSection p{
+    margin: 0;
+}
+
+.copyrightSection ul { width: 100%; text-align: center; margin-top: 20px; }
+.copyrightSection li { display: inline-block; margin: 0 4px; }
+.copyrightSection li a { display: block; text-decoration: none; border-bottom: none; padding: 15px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: all 0.3s ease-in, 1s; -moz-transition: all 0.3s ease-in, 1s; -o-transition: all 0.3s ease-in, 1s; -ms-transition: all 0.3s ease-in, 1s; transition: all 0.3s ease-in, 1s; }
+.copyrightSection .facebook { background: url(../images/icons/facebook.png) center no-repeat #363b3f;}
+.copyrightSection .facebook:hover { background-color: #4265b9; }
+.copyrightSection  .behance { background: url(../images/icons/behance.png) center no-repeat #363b3f; }
+.copyrightSection  .behance:hover { background-color: #3fbff0; }
+.copyrightSection  .instagram { background: url(../images/icons/instagram.png) center no-repeat #363b3f; }
+.copyrightSection  .instagram:hover { background-color: #956751; }
+.copyrightSection  .github { background: url(../images/icons/github.png) center no-repeat #363b3f; }
+.copyrightSection  .github:hover { background-color: #689e75; }
+.copyrightSection  .linkedin { background: url(../images/icons/linkedin.png) center no-repeat #363b3f; }
+.copyrightSection  .linkedin:hover { background-color: #0073b2; }
